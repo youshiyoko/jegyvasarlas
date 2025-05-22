@@ -11,7 +11,7 @@
     <!-- ============ TOP BAR ============ -->
     <div class="topbar">
         <div class="lang-flags">
-            <!-- csak példaképek – cseréld saját ikonjaidra -->
+           
             <img src="pics/flags.png" alt="Magyar"/>
         </div>
         <span class="tagline">Hivatalos jegyértékesítési felület<br><em>Official ticketing site</em></span>
@@ -29,7 +29,6 @@
         </div>
 
         <div class="hero">
-            <!-- panorámafotó helye -->
             <img src="pics/header.png" alt="Parlament látogatóközpont" height="100%" width="100%"/>
         </div>
 
@@ -48,7 +47,6 @@
 
     <!-- ============ MAIN CONTENT ============ -->
     <main>
-        <!-- ***** Dátum + Idősáv kiválasztó ***** -->
         <section id="booking" class="booking">
             <h2>Válasszon egy időpontot</h2>
 
@@ -56,7 +54,6 @@
             <input type="date" id="visit-date" value="2025-05-21" />
 
             <div class="slot-carousel">
-                <!-- egyetlen “kártya” – sokszorosítsd backendből vagy JS-ből -->
                 <article class="slot soldout">
                     <header>
                         <span class="day">22</span>
@@ -112,8 +109,6 @@
                     <p class="lang-note">Séta <strong>angol</strong> idegenvezetéssel</p>
                     <button disabled>ELKELT</button>
                 </article>
-
-                <!-- ⟶ további slot-kártyák ... -->
             </div>
 
 
@@ -124,10 +119,7 @@
 <div id="price-img-wrapper" style="display: none; margin-top: 1rem;">
     <img src="pics/jegyarak.png" alt="Jegyárak" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 6px;" />
 </div>
-
-
         </section>
-            <!-- információs sávok -->
         <section id="news">
     <h2 class="section-title">Aktuális</h2>
             <div class="alert">
@@ -139,8 +131,6 @@ Országház-látogatás során csak a díszlépcsőház, a kupolacsarnok és a S
                 <p><strong>Felhívjuk figyelmüket, hogy 2025. május 22-én rendezvény miatt 12:30-ig szünetel a látogatás.</strong></p>
             </div>
         </section>
-
-        <!-- ***** Információk ***** -->
         <section id="info">
             <h2>Információk</h2>
              
@@ -169,7 +159,6 @@ Ezen dokumentum hiányában a látogató beléptetését az Országgyűlési Őr
 <p class="justify">Iskolai csoportok a parlament.jegymester.hu/iskola oldalon regisztráció után jelentkezhetnek.</p>
         </section>
 
-        <!-- ***** Elérhetőség ***** -->
         <section id="contact">
             <h2>Elérhetőség</h2>
             <h3>Nyitvatartás:</h3>
@@ -186,7 +175,6 @@ Ezen dokumentum hiányában a látogató beléptetését az Országgyűlési Őr
         <br><br>
     </main>
 
-    <!-- ============ FOOTER ============ -->
     <footer>
         <img src="pics/footer_crest.png" alt="Címer" class="crest" />
 
@@ -213,18 +201,12 @@ Ezen dokumentum hiányában a látogató beléptetését az Országgyűlési Őr
 
 </body>
 <script>
-    // Amikor egy menüpontot megnyomnak, jelöld aktívnak
     document.querySelectorAll('.main-nav a').forEach(link => {
         link.addEventListener('click', function() {
-            // Először töröld az összes "active" osztályt
             document.querySelectorAll('.main-nav a').forEach(el => el.classList.remove('active'));
-            
-            // Majd add hozzá az aktuálisan kattintotthoz
             this.classList.add('active');
         });
     });
-
-    // Ha oldal újratöltés nélkül történik navigáció (pl. #link), akkor frissítsük az aktív elemet scroll alapján
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('main section[id]');
         let currentId = '';
